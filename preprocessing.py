@@ -9,8 +9,7 @@ class TitanicPreprocessor:
         clean_df = df.copy()
         
         # Step 1: Drop columns that don't help us predict survival
-        # (Manav explicitly drops Ticket and Cabin in his notebook)
-        columns_to_drop = ['Ticket', 'Cabin']
+        columns_to_drop = ['Ticket', 'Cabin', 'Name']
         clean_df = clean_df.drop(columns_to_drop, axis=1, errors='ignore')
         
         # Step 2: Convert 'Sex' from text to numbers (female=1, male=0)
