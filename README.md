@@ -1,7 +1,7 @@
 # Titanic Survival Prediction - OOP Pipeline
 
-**Author:** ONGCHUSIANG
-**Student ID:** [Your Matrix/Student ID]
+**Author:** ONG CHU SIANG
+**Student ID:** [BS23110188]
 **Institution:** Universiti Malaysia Sabah (UMS)
 
 ## Project Overview
