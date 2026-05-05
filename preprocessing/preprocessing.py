@@ -10,7 +10,7 @@ def engineer_features(df):
     
     # 2. Title Extraction using Regular Expressions
     # This looks for a word followed by a period (e.g., "Mr.", "Miss.")
-    df['Title'] = df['Name'].apply(lambda x: re.search(' ([A-Za-z]+)\.', x).group(1) if pd.notnull(x) else '')
+    df['Title'] = df['Name'].apply(lambda x: re.search(r' ([A-Za-z]+)\.', x).group(1) if pd.notnull(x) else '')
     
     # 3. Group rare titles together to prevent model overfitting
     rare_titles = ['Lady', 'Countess','Capt', 'Col', 'Don', 'Dr', 
