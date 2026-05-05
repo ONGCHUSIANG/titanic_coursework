@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp": "2026-05-05 14:54:15",
+        "model": "LogisticRegressionModel",
+        "accuracy": 80.13,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 14:54:15",
+        "model": "RandomForestModel",
+        "accuracy": 97.98,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 14:59:26",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:01:38",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:05:48",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:15:07",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:15:17",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:15:53",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:16:03",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    },
+    {
+        "timestamp": "2026-05-05 15:22:57",
+        "model": "Tuned_RandomForest",
+        "accuracy": 0.9012,
+        "parameters": "Default"
+    }
+]

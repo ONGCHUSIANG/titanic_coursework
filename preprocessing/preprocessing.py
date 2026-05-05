@@ -1,3 +1,29 @@
+import pandas as pd
+import re
+
+def engineer_features(df):
+    """Adds advanced features to the Titanic dataset."""
+    df = df.copy() # Prevent setting with copy warnings
+    
+    # 1. Family Size: Siblings/Spouses + Parents/Children + 1 (themselves)
+    df['Family_Size'] = df['SibSp'] + df['Parch'] + 1
+    
+    # 2. Title Extraction using Regular Expressions
+    # This looks for a word followed by a period (e.g., "Mr.", "Miss.")
+    df['Title'] = df['Name'].apply(lambda x: re.search(' ([A-Za-z]+)\.', x).group(1) if pd.notnull(x) else '')
+    
+    # 3. Group rare titles together to prevent model overfitting
+    rare_titles = ['Lady', 'Countess','Capt', 'Col', 'Don', 'Dr', 
+                   'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona']
+    df['Title'] = df['Title'].replace(rare_titles, 'Rare')
+    
+    # 4. Standardize French titles
+    df['Title'] = df['Title'].replace('Mlle', 'Miss')
+    df['Title'] = df['Title'].replace('Ms', 'Miss')
+    df['Title'] = df['Title'].replace('Mme', 'Mrs')
+    
+    return df
+
 class TitanicPreprocessor:
     def __init__(self):
         """Initialize the preprocessor."""
