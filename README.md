@@ -21,7 +21,7 @@ The codebase is decomposed into a strict hierarchical folder system to separate 
 * `requirements.txt`: Lists the external Python libraries required (`pandas`, `numpy`, `scikit-learn`, `matplotlib`).
 
 ## Outputs Generated
-Running the pipeline will automatically generate two files in the root directory:
+Running the pipeline will automatically generate two files in the root directory and two external html links in the browser:
 * `submission.csv`: The final prediction file formatted for Kaggle scoring.
 * `survival_chart.png`: A bar chart visualizing the survival distribution of the training data.
 * `2 html charts`: Titanic Survival Analysis and Model Feature Importance will be generated in the browser.
