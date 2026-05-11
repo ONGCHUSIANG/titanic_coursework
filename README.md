@@ -24,7 +24,7 @@ The codebase is decomposed into a strict hierarchical folder system to separate 
 Running the pipeline will automatically generate two files in the root directory:
 * `submission.csv`: The final prediction file formatted for Kaggle scoring.
 * `survival_chart.png`: A bar chart visualizing the survival distribution of the training data.
-* 2 html charts: Titanic Survival Analysis and Model Feature Importance will be genrated in the browser.
+* `2 html charts`: Titanic Survival Analysis and Model Feature Importance will be generated in the browser.
 
 ## How to Run
 
