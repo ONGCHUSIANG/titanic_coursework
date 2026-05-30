@@ -9,16 +9,32 @@ This repository contains an Object-Oriented Programming (OOP) implementation of 
 
 It specifically demonstrates core software engineering principles, including **Encapsulation**, **Inheritance**, and **Polymorphism**, to seamlessly manage, evaluate, and visualize multiple machine learning models.
 
-## Project Structure
-The codebase is decomposed into a strict hierarchical folder system to separate the machine learning workflow stages:
+## System Architecture & Component Mapping
 
-* `data/`: Contains the raw datasets (`train.csv`, `test.csv`) and the data loading module (`data_loader.py`).
-* `preprocessing/`: Contains `preprocessing.py`, which handles data cleaning, feature engineering, and missing value imputation.
-* `models/`: Contains `models.py`, demonstrating Inheritance and Polymorphism for model selection and training (Logistic Regression, Random Forest).
-* `evaluation/`: Contains `evaluation.py` for outputting model accuracy metrics.
-* `utils/`: Contains `visualization.py`, which uses Matplotlib to generate exploratory charts.
-* `main.py`: The central execution script tying all modules together.
-* `requirements.txt`: Lists the external Python libraries required (`pandas`, `numpy`, `scikit-learn`, `matplotlib`).
+To ensure a clean separation of concerns, the pipeline is decomposed into dedicated, reusable components. Below is a detailed mapping of the structural roles of each file and folder in the repository:
+
+| Component Path | Structural Role & Architectural Function |
+| :--- | :--- |
+| `main.py` | **Central Pipeline Coordinator:** The root execution engine that orchestrates the entire workflow by importing modules and running processing, training, and evaluation steps in sequence. |
+| `config.yaml` | **Configuration Registry:** Centralizes project hyperparameters, relative file directory paths, and random state seeds to keep code logic separate from environment settings. |
+| `requirements.txt` | **Ecosystem Dependencies:** Declares the absolute third-party library versions required to run the pipeline safely (`pandas`, `scikit-learn`, etc.). |
+| `data/data_loader.py` | **Data Ingestion Module:** Handles robust file-system access, tracking and loading raw CSV inputs into standard data containers. |
+| `preprocessing/preprocessing.py` | **Data Engineering Layer:** Encapsulates row cleaning routines, feature transformations, missing value imputations, and predictive variable matrix generation. |
+| `models/models.py` | **Algorithmic Engine:** Implements the core **Inheritance** and **Polymorphism** structure, defining unified training and prediction behaviors across multiple model variants. |
+| `evaluation/evaluation.py` | **Validation & Analytics:** Calculates comprehensive validation metrics and cross-validation arrays to compare and evaluate model accuracy thresholds. |
+
+## Dependencies & Ecosystem Packages
+
+The pipeline relies on standard Python scientific and machine learning libraries. These dependencies are automatically verified and managed by the ecosystem configuration environment:
+
+| Package Name | Domain Classification | Architectural Application in Pipeline |
+| :--- | :--- | :--- |
+| `pandas` | Data Manipulation & Structures | Used in `data_loader.py` and `preprocessing.py` for structured DataFrame parsing, tabular alignment, and missing value management. |
+| `numpy` | Numerical Computing Vectors | Utilized for low-level matrix transformations, array manipulation, and mathematical indexing operations. |
+| `scikit-learn` | Predictive Machine Learning | Powers the entire `models/` and `evaluation/` directories, providing the core algorithmic frameworks for Logistic Regression, Random Forests, and accuracy assessment tracking. |
+| `matplotlib` | Static Visual Graphics | Used in `visualization.py` to design and render the static exploratory charts exported directly into the project directory. |
+| `plotly` / `bokeh` | High-Fidelity Interactive Plots | Drives the generation of standalone browser interfaces, rendering interactive mouse-hover metrics for both feature priorities and survival distributions. |
+| `pyyaml` | Configuration Management | Parses configuration records (`config.yaml`) to feed constant parameters safely to the core runtime pipeline without hardcoding. |
 
 ## Outputs Generated
 Running the pipeline will automatically generate two files in the root directory and two external html links in the browser:
