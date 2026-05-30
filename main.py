@@ -19,7 +19,6 @@ with open("config.yaml", "r") as file:
     config = yaml.safe_load(file)
 
 def main():
-    # 3. CHANGED: Replaced all print() statements with logging.info()
     logging.info("Initializing pipeline...")
     loader = TitanicDataLoader(train_path=config['data']['train_path'], test_path=config['data']['test_path'])
     train_data, test_data = loader.load_data()
@@ -50,7 +49,6 @@ def main():
     logging.info("Starting Machine Learning & Hyperparameter Tuning...")
     evaluator = ModelEvaluator()
 
-    # 4. FIXED: I removed the duplicate training block so it only runs once!
     logging.info("Finding the absolute best Random Forest settings (this may take a moment)...")
     best_model = tune_and_train_rf(X_train, Y_train)
 

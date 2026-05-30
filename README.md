@@ -27,6 +27,10 @@ Running the pipeline will automatically generate two files in the root directory
 * `2 html charts`: Titanic Survival Analysis and Model Feature Importance will be generated in the browser.
 
 ## How to Run
+You can execute this OOP pipeline either locally on your machine using **Visual Studio Code** or completely in the cloud using **GitHub Codespaces**. Choose the option that fits your current setup:
+
+### Option A: Running Locally in VS Code
+Use this method if you want to execute the project directly on your physical machine.
 
 1. Clone this repository to your local machine.
 2. Ensure you have Python installed, then install the required dependencies:
@@ -37,4 +41,25 @@ Running the pipeline will automatically generate two files in the root directory
    ```bash
    python main.py
    ```
-4. Upon successful execution, the terminal will output the training accuracy of each model, and a `submission.csv` file will be generated in the root directory.
+4. Upon successful execution, the terminal will output the training accuracy of each model, a `submission.csv` file will be generated in the root directory and 2 html charts will be automatically opened in the browser.
+
+### Option B: Running in the Cloud via GitHub Codespaces
+
+1. Launch the Workspace:
+   Click the green <> Code button at the top of this GitHub repository page, toggle to the Codespaces tab, and click Create codespace on main.
+2. Access the Terminal Workspace:
+   Once the cloud container loads, locate the lower dashboard panel. If the terminal window is hidden, open it via the application menu: ☰ -> Terminal -> New Terminal (or use the Ctrl + ~ shortcut).
+3. Initialize the Environment:
+   Run the following block to install all required analytic and algorithmic dependencies inside your cloud container:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the Project:
+   Execute the central system framework:
+    ```bash
+   python main.py
+   ```
+5. Interact with the Results:
+   The metrics will render instantly inside your terminal log. Your submission.csv and static images will appear in the left file explorer sidebar. Because Codespaces runs in a virtual cloud container, if the interactive HTML links do not open automatically, simply right-click the generated .html files in the sidebar and choose Open Preview to view the dynamic graphics!
+
+
