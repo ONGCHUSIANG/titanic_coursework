@@ -60,6 +60,6 @@ Use this method if you want to execute the project directly on your physical mac
    python main.py
    ```
 5. Interact with the Results:
-   The metrics will render instantly inside your terminal log. Your submission.csv and static images will appear in the left file explorer sidebar. Because Codespaces runs in a virtual cloud container, if the interactive HTML links do not open automatically, simply right-click the generated .html files in the sidebar and choose Open Preview to view the dynamic graphics!
+   The metrics will render instantly inside your terminal log. The submission.csv and static images will appear in the left file explorer sidebar. Because Codespaces runs in a virtual cloud container, if the interactive HTML links do not open automatically, simply right-click the generated .html files in the sidebar and choose Open Preview to view the dynamic graphics!
 
 
